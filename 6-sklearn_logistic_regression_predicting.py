@@ -12,8 +12,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.35)
 
 # Training a Linear Regression model with fit()
 from sklearn.linear_model import LogisticRegression
-#lr = LogisticRegression(multi_class='multinomial')
-lr = LogisticRegression()
+lr = LogisticRegression(multi_class='auto', solver='lbfgs', max_iter=1000)
+#lr = LogisticRegression()
 lr.fit(X_train, y_train)
 
 # Predicting the results for our test dataset
